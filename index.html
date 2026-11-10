@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Utility Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>Time<span>ly.</span></h1>
+                <p>Your little space to manage time ♡</p>
+            </div>
+            <div class="header-icon">⏰</div>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <div>
+                <h2>Make every second count!</h2>
+                <p>Stay focused, organized and on time.</p>
+            </div>
+            <div class="heart">♡</div>
+        </section>
+
+        <!-- Dashboard Grid -->
+        <main class="grid-container">
+
+            <!-- Live Clock -->
+            <section class="card clock-card">
+                <div class="card-heading">
+                    <span class="card-icon">🕒</span>
+                    <h3>Live Clock</h3>
+                </div>
+
+                <div id="clock" class="clock">00:00:00</div>
+                <div id="ampm" class="ampm">AM</div>
+                <p id="date" class="date">Loading date...</p>
+            </section>
+
+            <!-- Countdown Timer -->
+            <section class="card timer-card">
+                <div class="card-heading">
+                    <span class="card-icon">⏳</span>
+                    <h3>Countdown Timer</h3>
+                </div>
+
+                <div class="timer-inputs">
+                    <div>
+                        <input type="number" id="timerMinutes"
+                               min="0" max="999" value="5">
+                        <label>Minutes</label>
+                    </div>
+                    <span>:</span>
+                    <div>
+                        <input type="number" id="timerSeconds"
+                               min="0" max="59" value="0">
+                        <label>Seconds</label>
+                    </div>
+                </div>
+
+                <div id="timerDisplay" class="timer-display">
+                    05:00
+                </div>
+
+                <div class="button-group">
+                    <button id="timerStart" class="primary-btn">Start</button>
+                    <button id="timerPause" class="secondary-btn">Pause</button>
+                    <button id="timerReset" class="secondary-btn">Reset</button>
+                </div>
+
+                <p id="timerStatus" class="status">Ready to focus?</p>
+            </section>
+
+            <!-- Stopwatch -->
+            <section class="card stopwatch-card">
+                <div class="card-heading">
+                    <span class="card-icon">⏱️</span>
+                    <h3>Stopwatch</h3>
+                </div>
+
+                <div id="stopwatchDisplay" class="stopwatch-display">
+                    00:00:00.00
+                </div>
+
+                <div class="button-group">
+                    <button id="stopwatchStart" class="primary-btn">Start</button>
+                    <button id="stopwatchLap" class="secondary-btn">Lap</button>
+                    <button id="stopwatchReset" class="secondary-btn">Reset</button>
+                </div>
+
+                <div class="laps-container">
+                    <h4>Lap Records</h4>
+                    <ul id="lapList">
+                        <li>No laps recorded yet.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Alarm -->
+            <section class="card alarm-card">
+                <div class="card-heading">
+                    <span class="card-icon">🔔</span>
+                    <h3>Alarm Clock</h3>
+                </div>
+
+                <p class="alarm-description">
+                    Set an alarm and never miss a moment.
+                </p>
+
+                <input type="time" id="alarmTime" class="alarm-input">
+
+                <div class="button-group">
+                    <button id="setAlarm" class="primary-btn">Set Alarm</button>
+                    <button id="clearAlarm" class="secondary-btn">Clear</button>
+                </div>
+
+                <p id="alarmStatus" class="status">No alarm set.</p>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ♡ and a little bit of time.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
